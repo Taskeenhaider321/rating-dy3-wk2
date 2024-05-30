@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="output.css" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+  </style>
+  <body class="">
+      <div class="dark:bg-slate-400 bg-[#141519] mx-auto px-4 flex justify-center items-center h-screen">
+        <div class="bg-[#19202A] dark:bg-[#FB7413] md:p-2 p-6 mx-auto rounded-xl">
+          <div id="main-page" class="flex flex-col justify-between h-[25rem] max-w-[450px] md:p-10">
+            <div class="flex items-center">
+                <div class="card-img bg-[#252D37] w-10 h-10 flex items-center justify-center rounded-full">
+                  <img src="./images/icon-star.svg" alt=""/>
+                </div>
+                <div class="flex pl-60">
+                  <img class="moon cursor-pointer" src="./images/moon.svg"/>
+                  <img class="sun cursor-pointer ml-4" src="./images/sun.svg"/>
+                </div>
+              </div>
+              
+            <h1 id="typed-h1" class="text-white text-3xl font-semibold h-5">How did we do?</h1>
+            <p class="text-[#959eac] dark:text-white">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+            <div>
+                
+              <ul class="flex justify-between text-white w-[90%]">
+                <button class="animation-bg bg-[#252D37] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC] focus:outline-none cursor-pointer" onclick="getRating(1)">
+                  1
+                </button>
+                <button class="animation-bg bg-[#252D37] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]" onclick="getRating(2)">
+                  2
+                </button>
+                <button class="animation-bg bg-[#252D37] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]" onclick="getRating(3)">
+                  3
+                </button>
+                <button class="animation-bg bg-[#252D37] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]" onclick="getRating(4)">
+                  4
+                </button>
+                <button class="animation-bg bg-[#252D37] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]" onclick="getRating(5)">
+                  5
+                </button>
+              </ul>
+            </div>
+            <div>
+              <button class="submit animation-bg text-white dark:bg-[#252D37] bg-[#FB7413] w-full flex flex-col items-center h-10 rounded-3xl justify-center uppercase" onclick="submitBtn()">
+                Submit
+              </button>
+            </div>
+          </div>
+
+          <div id="result-page" class="hidden flex flex-col justify-between h-[25rem] max-w-[450px] md:p-8" >
+            <div class="flex items-center justify-center">
+              <img src="./images/illustration-thank-you.svg" alt="" srcset=""/>
+            </div>
+            <div>
+            <p class="bg-[#252D37] text-[#fb7413] text-xl font-bold flex justify-center w-[70%] mx-auto rounded-3xl">
+              You selected<span id="rating-number">1</span>out of 5
+            </p>
+            <p class="text-white text-3xl font-semibold flex justify-center pt-4">
+              Thank you!
+            </p>
+            <p class="text-[#959eac] text-center pt-4 dark:text-white">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don't hesitate to get in touch!
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="script.js"></script>
+  </body>
+</html>
